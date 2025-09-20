@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-Kalkulator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-xs mx-auto bg-gray-900 rounded-lg shadow-lg p-6">
+      <div class="mb-6">
+        <input type="text" id="display" class="w-full bg-gray-800 text-white text-4xl text-right rounded-md p-4" readonly />
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <button onclick="clearDisplay()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-lg text-xl">AC</button>
+        <button onclick="appendValue('(')" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-lg text-xl">(</button>
+        <button onclick="appendValue(')')" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-lg text-xl">)</button>
+        <button onclick="appendValue('/')" class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-lg text-xl">/</button>
+
+        <button onclick="appendValue('7')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">7</button>
+        <button onclick="appendValue('8')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">8</button>
+        <button onclick="appendValue('9')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">9</button>
+        <button onclick="appendValue('*')" class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-lg text-xl">x</button>
+
+        <button onclick="appendValue('4')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">4</button>
+        <button onclick="appendValue('5')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">5</button>
+        <button onclick="appendValue('6')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">6</button>
+        <button onclick="appendValue('-')" class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-lg text-xl">-</button>
+
+        <button onclick="appendValue('1')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">1</button>
+        <button onclick="appendValue('2')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">2</button>
+        <button onclick="appendValue('3')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">3</button>
+        <button onclick="appendValue('+')" class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-lg text-xl">+</button>
+
+        <button onclick="appendValue('0')" class="col-span-2 bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">0</button>
+        <button onclick="appendValue('.')" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-lg text-xl">.</button>
+        <button onclick="calculateResult()" class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-lg text-xl">=</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
